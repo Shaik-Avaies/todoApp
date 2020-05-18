@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title> <%= title%> </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+        
+        <div class="container-fluid col-md-6 felx-col">
+
+            <div class="d-flex justify-content-center">
+                <h1 class="center">TODO App</h1>
+            </div>
+
+            <form class="flex-col" method="post" action="/add-task">
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                    <label for="validationDefault01"><h5>Description</h5></label>
+                    <input type="text" name="description" class="form-control" id="validationDefault01" placeholder="What do you want to do?" required>
+                    </div>
+                
+                    
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="exampleFormControlSelect1"><h5>Category</h5></label>
+                        <select name="category" class="form-control" id="exampleFormControlSelect1" required>
+                            <option selected disabled value="">Choose a Category</option>
+                            <option>Personal</option>
+                            <option>Professional</option>
+                            <option>School</option>
+                            <option>College</option>
+                        </select>
+                      </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01"><h5>Due Date</h5></label>
+                        <input name="date" type="date" class="form-control" id="validationDefault01" value="Mark" required>
+                    </div>
+
+                </div>
+            
+                <button class="flex-row addButton col-md-12 mb-3 mt-1 btn btn-dark" type="submit">
+                    <i class="fas fa-plus"></i>
+                    <h4 style="display: inline;">ADD TASK</h4>
+                </button>
+
+            </form>
+
+
+                <% for(let i of task){ %>
+                    <div class="card text-white mb-3">
+
+                        <div class="flex-row flex-row-add card-header bg-primary border-success">
+                            <h5 style="display: inline;">
+                                <span class="bg-primary">Category : </span> 
+                                <span class="bg-warning"><%= i.category %></span>
+                            </h5>
+                            <a href="/delete-task/?id=<%= i._id %>"> 
+                                <button class="btn btn-danger">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="card-body bg-success">
+                            <h5 style="display: inline;" class="card-title">
+                                <span>Description : </span> 
+                                <span><%= i.description %></span>
+                            </h5>
+                          <p class="flex-row card-text mt-2">
+                                <span>=========</span> 
+                                <span class="ml-3">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <%= i.date %>
+                                </span>
+                                <span> =========<span>
+                            </p>
+                        </div>
+
+                    </div>
+
+                <% } %>
+
+        </div>
+
+        <script src="/Js/script.js"></script>
+
+    </body>
+</html>

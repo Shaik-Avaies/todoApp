@@ -1,0 +1,36 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: #fceed1 url(/Images/5.jpg);
+    background-blend-mode: multiply;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-row-add{
+    justify-content: space-between;
+}
+
+.container-fluid{
+    margin-top: 2%;
+}
+
+h5{
+    margin-bottom: -5px;
+}
+
+.addButton{
+    align-items: baseline;
+    width:30%;
+    border: none;
+}
