@@ -11,7 +11,7 @@ app = express();
 app.use('/',require('./routes'));
 //setting up assets
 app.use(express.static('assets'));
-cd
+
 
 
 //set up views
