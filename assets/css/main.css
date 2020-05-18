@@ -34,3 +34,9 @@ h5{
     width:30%;
     border: none;
 }
+
+@media only screen and (max-width: 1250px){
+    .addButton{
+        width: 50%;
+    }
+}
