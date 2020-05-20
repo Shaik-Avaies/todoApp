@@ -1,15 +1,20 @@
+/* Body */
 body{
     font-family: 'Times New Roman', Times, serif;
     background: #fceed1 url(/Images/5.jpg);
     background-blend-mode: multiply;
 }
 
+
+/* Animated balls */
 .ball {
     position: absolute;
     border-radius: 100%;
     opacity: 0.7;
   }
 
+
+  /* Genearal Flex styles for reuse */
 .flex-col{
     display: flex;
     flex-direction: column;
@@ -27,6 +32,8 @@ body{
     justify-content: space-between;
 }
 
+
+/* Setting Z-index so that balls go inside */
 .container-fluid{
     z-index: 1;
     margin-top: 2%;
@@ -42,6 +49,8 @@ h5{
     border: none;
 }
 
+
+/* Adding Some Transitions for card item */
 .card{
     transition-property: transform box-shadow;
     transition-duration: 0.3s;
@@ -53,12 +62,15 @@ h5{
 }
 
 
+/* Medai Queries */
 @media only screen and (max-width: 1250px){
     .addButton{
         width: 50%;
     }
 }
 
+
+/* Applying shadoness for heading */
 
 h1 {
     font-family: "Paytone One";
@@ -78,6 +90,7 @@ h1 {
   }
 
 
+  /* Text Area for growing content */
   textarea{  
     overflow:hidden;
     padding:10px;
@@ -89,7 +102,7 @@ h1 {
   }
 
 
-
+/* Keyframges for card */
   @keyframes wiggle {
     30% {
       transform: rotate( -5deg);
