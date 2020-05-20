@@ -4,6 +4,12 @@ body{
     background-blend-mode: multiply;
 }
 
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+  }
+
 .flex-col{
     display: flex;
     flex-direction: column;
@@ -22,6 +28,7 @@ body{
 }
 
 .container-fluid{
+    z-index: 1;
     margin-top: 2%;
 }
 
@@ -35,8 +42,70 @@ h5{
     border: none;
 }
 
+.card{
+    transition-property: transform box-shadow;
+    transition-duration: 0.3s;
+    transition-delay: 0.5s;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(32,32,32,0.9);
+}
+
+
 @media only screen and (max-width: 1250px){
     .addButton{
         width: 50%;
     }
 }
+
+
+h1 {
+    font-family: "Paytone One";
+    color: #202020;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+  
+  h1 span {
+    display: block;
+    margin: 11px 0 17px 0;
+    font-size: 80px;
+    line-height: 80px;
+    color: #001f3f;
+    text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+    letter-spacing: -4px;
+  }
+
+
+  textarea{  
+    overflow:hidden;
+    padding:10px;
+    width:250px;
+    font-size:14px;
+    display:block;
+    border-radius:10px;
+    border:6px solid #556677;
+  }
+
+
+
+  @keyframes wiggle {
+    30% {
+      transform: rotate( -5deg);
+    }
+    60% {
+      transform: rotate( 5deg);
+    }
+    100% {
+      transform: rotate( 0deg);
+    }
+  }
+  
+  .wiggle:hover {
+    -webkit-animation-name: wiggle;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-count: 1;
+    -webkit-animation-function: ease-in-out;
+  }

@@ -5,21 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/main.scss"> 
 
     </head>
     <body>
-        
+
+
         <div class="container-fluid col-md-6 felx-col">
 
             <div class="d-flex justify-content-center">
-                <h1 class="center">TODO App</h1>
+                <h1 class="center"> <span>TODO App</span></h1>
             </div>
 
             <form class="flex-col" method="post" action="/add-task">
                 <div class="form-row">
                     <div class="col-md-12 mb-3">
                     <label for="validationDefault01"><h5>Description</h5></label>
-                    <input type="text" name="description" class="form-control" id="validationDefault01" placeholder="What do you want to do?" required>
+                    <textarea type="text" name="description" class="form-control" id="validationDefault01" placeholder="What do you want to do?" required rows='1' placeholder='Auto-Expanding Textarea'></textarea>
+                    <!-- <input type="text" name="description" class="form-control" id="validationDefault01" placeholder="What do you want to do?" required> -->
                     </div>
                 
                     
@@ -50,7 +53,7 @@
 
 
                 <% for(let i of task){ %>
-                    <div class="card text-white mb-3">
+                    <div class="card wiggle text-white mb-3">
 
                         <div class="flex-row flex-row-add card-header bg-primary border-success">
                             <h5 style="display: inline;">
